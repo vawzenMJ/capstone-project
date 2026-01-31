@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+:root {
+    --primary: #004d40; /* DeKUT Green */
+    --accent: #ffc107;
+    --sidebar-bg: #1a1c1e;
+    --bg-light: #f4f7f6;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { display: flex; font-family: 'Inter', sans-serif; background: var(--bg-light); color: #2d3436; }
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 300px; background: var(--sidebar-bg); color: white;
+    height: 100vh; position: fixed; padding: 40px 20px; overflow-y: auto;
+}
+
+.brand { font-size: 1.2rem; font-weight: 800; color: var(--accent); margin-bottom: 30px; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; }
+
+.checklist-nav { list-style: none; }
+.checklist-nav a {
+    color: #9ca3af; text-decoration: none; font-size: 0.85rem;
+    padding: 10px 15px; display: block; border-radius: 8px; transition: 0.3s;
+}
+.checklist-nav a:hover, .checklist-nav li.active a { background: rgba(255,255,255,0.1); color: white; }
+.video-req a { border-left: 2px solid var(--accent); margin-left: 5px; }
+
+/* Main Content Area */
+.content-area { margin-left: 300px; flex-grow: 1; padding: 40px; width: calc(100% - 300px); }
+
+.main-header { margin-bottom: 40px; }
+.status-badge { display: inline-block; background: #e6fffa; color: #004d40; padding: 4px 12px; border-radius: 20px; font-weight: 700; font-size: 0.8rem; margin-top: 10px; }
+
+.audit-card {
+    background: white; border-radius: 12px; padding: 30px; margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-left: 6px solid #ccc;
+}
+.audit-card.featured { border-left-color: var(--primary); }
+
+.card-tag { font-size: 0.7rem; font-weight: 800; color: #b2bec3; text-transform: uppercase; margin-bottom: 10px; }
+
+.video-container { margin: 20px 0; aspect-ratio: 16/9; background: #000; border-radius: 8px; overflow: hidden; }
+.video-container iframe { width: 100%; height: 100%; }
+
+.btn {
+    padding: 10px 18px; background: var(--primary); color: white;
+    text-decoration: none; border-radius: 6px; font-size: 0.8rem; font-weight: 700; display: inline-block; margin-right: 5px;
+}
+.btn.secondary { background: transparent; color: var(--primary); border: 1.5px solid var(--primary); }
+
+.button-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.evidence-list { list-style: none; margin-top: 10px; }
+.evidence-list li { padding: 8px 0; border-bottom: 1px solid #eee; }
+.evidence-list a { color: var(--primary); font-weight: 600; text-decoration: none; }
