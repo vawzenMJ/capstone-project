@@ -1,0 +1,181 @@
+:root {
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --bg-light: #f1f5f9;
+    --card-bg: #ffffff;
+    --text-dark: #0f172a;
+    --text-muted: #64748b;
+    --sidebar-bg: #1e293b;
+    --success: #22c55e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 280px;
+    background-color: var(--sidebar-bg);
+    color: white;
+    padding: 2rem;
+    position: fixed;
+    height: 100vh;
+    box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+}
+
+.brand {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 2.5rem;
+    color: #60a5fa;
+    letter-spacing: -0.5px;
+}
+
+.checklist-nav {
+    list-style: none;
+}
+
+.checklist-nav li {
+    margin-bottom: 0.8rem;
+}
+
+.checklist-nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+    padding: 0.6rem;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.checklist-nav a:hover {
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+/* Main Content Area */
+.content-area {
+    margin-left: 280px;
+    padding: 3rem;
+    width: 100%;
+}
+
+.main-header {
+    margin-bottom: 3rem;
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.status-badge {
+    display: inline-block;
+    background: var(--success);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+/* Grid Layout for Audit Cards */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.audit-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.audit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+/* Highlight MindScale Innovation */
+.audit-card.featured {
+    border: 2px solid var(--primary);
+    background: linear-gradient(to bottom right, #ffffff, #f8fafc);
+}
+
+.card-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.audit-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.audit-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Button Styling */
+.button-row {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.6rem 1.2rem;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: var(--primary-hover);
+}
+
+.btn.secondary {
+    background: #f1f5f9;
+    color: var(--text-dark);
+}
+
+.btn.secondary:hover {
+    background: #e2e8f0;
+}
+
+/* Video Section */
+.video-container {
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+}
